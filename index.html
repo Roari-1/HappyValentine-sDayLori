@@ -7,14 +7,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="intro-screen" class="overlay">
-        <div class="intro-text" id="intro-text">From the moment we met, you've filled my life with a love more beautiful than I could have ever imagined.</div>
+
+    <div id="intro-screen">
+        <div id="intro-text">From the moment we met, you've filled my life with a love more beautiful than I could have ever imagined.</div>
     </div>
 
     <div id="main-content" class="hidden">
         <div id="headline-container">
-            <div id="shine">Happy Valentine's Day 💞</div>
+            <div id="shine">Happy Valentine's Day 💞</div> 
         </div>
+
         <div id="headline-container">
             <div id="shine">Lori <3</div>
         </div>
@@ -38,15 +40,27 @@
     </div>
 
     <script>
-        document.getElementById("intro-screen").addEventListener("click", function() {
+        document.getElementById("intro-screen").addEventListener("click", function () {
             let introText = document.getElementById("intro-text");
-            if (introText.innerText === "From the moment we met, you've filled my life with a love more beautiful than I could have ever imagined.") {
-                introText.innerText = "This Valentine's Day, my heart overflows with gratitude for you. You're my everything.";
-            } else {
-                document.getElementById("intro-screen").style.display = "none";
+            
+            introText.style.animation = "fadeOut 2s forwards";
+            
+            setTimeout(() => {
+                introText.innerHTML = "This Valentine's Day, my heart overflows with gratitude for you. You're my everything.";
+                introText.style.animation = "fadeIn 2s forwards";
+            }, 2000);
+
+            setTimeout(() => {
+                this.style.animation = "fadeOut 2s forwards";
+            }, 5000);
+
+            setTimeout(() => {
+                this.style.display = "none";
                 document.getElementById("main-content").classList.remove("hidden");
-            }
+                document.getElementById("main-content").style.animation = "fadeIn 2s forwards";
+            }, 7000);
         });
     </script>
+
 </body>
 </html>
