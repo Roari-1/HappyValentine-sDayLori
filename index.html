@@ -1,40 +1,52 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Valentine's Lori</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Lori</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div id="intro-screen" class="overlay">
+        <div class="intro-text" id="intro-text">From the moment we met, you've filled my life with a love more beautiful than I could have ever imagined.</div>
+    </div>
 
-  <div id="headline-container">
-    <div id="shine">Happy Valentine's Day 💞</div> 
-  </div>
+    <div id="main-content" class="hidden">
+        <div id="headline-container">
+            <div id="shine">Happy Valentine's Day 💞</div>
+        </div>
+        <div id="headline-container">
+            <div id="shine">Lori <3</div>
+        </div>
 
-  <div id="headline-container">
-    <div id="shine"> My Lori <3</div>
-  </div>
+        <div class="heart-container">
+            <div class="heart">❤️</div>
+            <div class="heart">💖</div>
+            <div class="heart">💕</div>
+            <div class="heart">💘</div>
+            <div class="heart">❤️</div>
+            <div class="heart">💖</div>
+            <div class="heart">💕</div>
+        </div>
 
+        <div class="gallery">
+            <img src="https://images.ctfassets.net/ub3bwfd53mwy/5WFv6lEUb1e6kWeP06CLXr/acd328417f24786af98b1750d90813de/4_Image.jpg?w=750" alt="Cute 1">
+            <img src="https://images.ctfassets.net/ub3bwfd53mwy/6PhlUjXZqaHqu6LqJ5G3X3/ee400fdfaf784e3d530a212ce3453c48/1_Image.jpg?w=750" alt="Cute 2">
+            <img src="https://images.ctfassets.net/ub3bwfd53mwy/5zi8myLobtihb1cWl3tj8L/45a40e66765f26beddf7eeee29f74723/6_Image.jpg?w=750" alt="Cute 3">
+            <img src="https://images.ctfassets.net/ub3bwfd53mwy/5Cl3WQGvVhTardH1BnaUYr/a4b4f134196eec30e4bb1ab8e0770411/9_Image.jpg?w=750" alt="Cute 4">
+        </div>
+    </div>
 
-  <div class="heart-container">
-    <div class="heart">❤️</div>
-    <div class="heart">💖</div>
-    <div class="heart">💕</div>
-    <div class="heart">💘</div>
-    <div class="heart">❤️</div>
-    <div class="heart">💖</div>
-    <div class="heart">💕</div>
-  </div>
-
-
-  <div class="gallery">
-    <img src="https://images.ctfassets.net/ub3bwfd53mwy/5WFv6lEUb1e6kWeP06CLXr/acd328417f24786af98b1750d90813de/4_Image.jpg?w=750" alt="Cute 1">
-    <img src="https://images.ctfassets.net/ub3bwfd53mwy/6PhlUjXZqaHqu6LqJ5G3X3/ee400fdfaf784e3d530a212ce3453c48/1_Image.jpg?w=750" alt="Cute 2">
-    <img src="https://images.ctfassets.net/ub3bwfd53mwy/5zi8myLobtihb1cWl3tj8L/45a40e66765f26beddf7eeee29f74723/6_Image.jpg?w=750" alt="Cute 3">
-    <img src="https://images.ctfassets.net/ub3bwfd53mwy/5Cl3WQGvVhTardH1BnaUYr/a4b4f134196eec30e4bb1ab8e0770411/9_Image.jpg?w=750" alt="Cute 4">
-  </div>
-
+    <script>
+        document.getElementById("intro-screen").addEventListener("click", function() {
+            let introText = document.getElementById("intro-text");
+            if (introText.innerText === "From the moment we met, you've filled my life with a love more beautiful than I could have ever imagined.") {
+                introText.innerText = "This Valentine's Day, my heart overflows with gratitude for you. You're my everything.";
+            } else {
+                document.getElementById("intro-screen").style.display = "none";
+                document.getElementById("main-content").classList.remove("hidden");
+            }
+        });
+    </script>
 </body>
 </html>
