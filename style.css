@@ -10,6 +10,31 @@ body {
     position: relative;
 }
 
+.hidden {
+    display: none;
+}
+
+#intro-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+@keyframes fadeOut {
+    100% { opacity: 0; }
+}
+
 #headline-container {
     display: flex;
     justify-content: center;
@@ -36,32 +61,6 @@ body {
     100% { background-position: 1000px; }
 }
 
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        url('https://placekitten.com/100/100'), 
-        url('https://placekitten.com/120/120'), 
-        url('https://placekitten.com/110/110'), 
-        url('https://placekitten.com/90/90'), 
-        url('https://placekitten.com/130/130'); 
-    background-size: 100px, 120px, 110px, 90px, 130px;
-    background-position: 10% 20%, 50% 40%, 80% 60%, 30% 70%, 70% 90%;
-    background-repeat: no-repeat;
-    opacity: 0.5;
-    animation: floatCats 6s infinite alternate;
-    z-index: -1;
-}
-
-@keyframes floatCats {
-    0% { transform: translateY(0px); }
-    100% { transform: translateY(25px); }
-}
-
 /* Floating Hearts */
 .heart-container {
     position: fixed;
@@ -86,7 +85,6 @@ body::before {
     50% { transform: translateY(-100px) scale(1.2); opacity: 0.8; }
     100% { transform: translateY(-200px) scale(1.4); opacity: 0; }
 }
-
 
 .heart:nth-child(1) { left: 10%; animation-duration: 6s; }
 .heart:nth-child(2) { left: 25%; animation-duration: 5s; }
