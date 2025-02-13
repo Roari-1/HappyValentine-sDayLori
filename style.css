@@ -6,7 +6,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #ffcc33, #ff3300);
+    background: linear-gradient(135deg, #ffcc33, #ff3300); /* Strong Yellow-Red Gradient */
     overflow: hidden;
     position: relative;
 }
@@ -67,7 +67,7 @@ body::before {
 
 
 .gallery {
-    --d: 8s;
+    --d: 15s; 
     display: grid;
     place-items: center;
     width: 220px;
@@ -87,10 +87,11 @@ body::before {
 
 
 @keyframes fade-in {
-    0%, 15% { opacity: 0; }
-    25%, 75% { opacity: 1; }
-    85%, 100% { opacity: 0; }
+    0%, 10% { opacity: 0; } 
+    20%, 95% { opacity: 1; } 
+    100% { opacity: 0; } 
 }
+
 
 @keyframes slide {
     0%, 20% { transform: translateX(0%) rotate(var(--r)); }
