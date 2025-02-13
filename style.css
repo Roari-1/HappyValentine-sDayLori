@@ -6,7 +6,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #ffcc33, #ff3300); /* Strong Yellow-Red Gradient */
+    background: linear-gradient(135deg, #ffcc33, #ff3300);
     overflow: hidden;
     position: relative;
 }
