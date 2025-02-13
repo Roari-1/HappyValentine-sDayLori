@@ -35,6 +35,11 @@ body {
     100% { opacity: 0; }
 }
 
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 #headline-container {
     display: flex;
     justify-content: center;
@@ -129,16 +134,3 @@ body {
     #shine {
         font-size: 22px;
     }
-
-    #headline-container {
-        margin-bottom: 20px;
-    }
-
-    .gallery {
-        width: 150px;
-    }
-
-    .gallery img {
-        border: 5px solid #f2f2f2;
-    }
-}
