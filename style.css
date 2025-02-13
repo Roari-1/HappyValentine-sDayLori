@@ -24,7 +24,7 @@ body {
     font-size: 60px;
     font-weight: bold;
     color: rgba(255, 0, 102, 0.6);
-    background: linear-gradient(to right, #222, #222 50%, #fff);
+    background: linear-gradient(135deg, #ffcc70, #ff6699);
     background-size: 150px;
     background-clip: text;
     -webkit-background-clip: text;
